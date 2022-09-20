@@ -43,6 +43,7 @@ cards.sort(() => 0.5 - Math.random())
 console.log(cards)
 
 const grid = document.querySelector('.grid')
+let cardsChosen = []
 
 function createBoard() {
   for (let i = 0; i < cards.length; i++){
@@ -56,6 +57,8 @@ function createBoard() {
 createBoard()
 
 function flipCard() {
+  let cardId = this.getAttribute('data-id')
+  cardsChosen.push(cards[cardId])
 
 }
 
