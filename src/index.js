@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
   },
 ]
 
-cards.sort(() => 0.5 - Math.random())  //miks cards
+cards.sort(() => 0.5 - Math.random())  
 console.log(cards)
 
 const grid = document.querySelector('.grid')
@@ -47,8 +47,17 @@ const grid = document.querySelector('.grid')
 function createBoard() {
   for (let i = 0; i < cards.length; i++){
     const card = document.createElement('img')
-    cards.setAttribute('src', 'src/images/blanj.png')
-    cards.setAttribute('data-id', i)
+    card.setAttribute('src', 'src/images/blank.png')
+    card.setAttribute('data-id', i)
+    cards.addEventListener('click', flipCard)
+    grid.appendChild(card)
   }
 }
+createBoard()
+
+function flipCard() {
+
+}
+
+
 })
