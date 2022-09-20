@@ -39,4 +39,16 @@ document.addEventListener('DOMContentLoaded', () => {
   },
 ]
 
+cards.sort(() => 0.5 - Math.random())  //miks cards
+console.log(cards)
+
+const grid = document.querySelector('.grid')
+
+function createBoard() {
+  for (let i = 0; i < cards.length; i++){
+    const card = document.createElement('img')
+    cards.setAttribute('src', 'src/images/blanj.png')
+    cards.setAttribute('data-id', i)
+  }
+}
 })
